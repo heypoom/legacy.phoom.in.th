@@ -1,0 +1,22 @@
+extends comp/page
+
+mixin sp
+  .nice
+    .indic
+    h1
+      span STARTUP
+      b POTION
+  .fsd-label
+    span We make MVPs that <br> investors love
+    .inner
+
+block meta
+  title Startup Potion: MVPs that investors love.
+
+block body
+  +nav("/startup.html")
+  main
+    section.startup
+      .container
+        h1 STARTUP<b>POTION</b>: <small>MVPs for your Startups!</small>
+        h5 MVP is the secret potion, they'll make investors fall in love~!

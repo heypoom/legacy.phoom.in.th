@@ -1,0 +1,19 @@
+- var pages = {"/": "about me", "/resume": "resume", "/blog": "blog", "/labs": "labs", "/startup.html": "startup potion", "/contact": "contact"}
+
+mixin links(current)
+  each name, link in pages
+    li(class=link === current ? "active" : "")
+      a(href=link)=name
+
+mixin nav(page)
+  nav
+    .nav-wrapper
+      a.brand-logo(href="/")
+        span PHOOMPARIN
+        b MANO
+      a.button-collapse(data-activates="mobile-nav")
+        i.material-icons menu
+      ul.nav-links.right.hide-on-med-and-down
+        +links(page)
+      ul.nav-links.side-nav#mobile-nav
+        +links(page)

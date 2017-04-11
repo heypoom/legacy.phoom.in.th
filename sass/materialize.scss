@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+// Mixins
+// @import "material/prefixer";
+@import "material/mixins";
+@import "material/color";
+
+// Variables;
+@import "material/variables";
+
+// Normalize (CSS Reset)
+@import "material/normalize";
+
+// Bootstrap Core
+@import "material/global";
+@import "material/grid";
+
+// Typography and Iconography
+// @import "material/roboto";
+@import "material/typography";
+@import "material/icons-material-design";
+
+// Material Components
+@import "material/navbar";
+@import "material/transitions";
+@import "material/cards";
+@import "material/toast";
+@import "material/tabs";
+@import "material/tooltip";
+@import "material/buttons";
+@import "material/dropdown";
+@import "material/waves";
+@import "material/modal";
+@import "material/forms/forms";
+
+@import "material/sideNav";
+
+// @import "material/badges";
+// @import "material/collapsible";
+// @import "material/chips";
+// @import "material/materialbox";
+// @import "material/table_of_contents";
+// @import "material/preloader";
+// @import "material/slider";
+// @import "material/carousel";
+// @import "material/tapTarget";
+// @import "material/pulse";
+// @import "material/date_picker/default";
+// @import "material/date_picker/default.date";
+// @import "material/date_picker/default.time";
