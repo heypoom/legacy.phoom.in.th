@@ -1,5 +1,13 @@
 @import "materialize.scss";
+@import "variables.scss";
+@import "layout.scss";
+
 @import "startup.scss";
+@import "landing.scss";
+
+main {
+  padding-top: 3.3em;
+}
 
 body {
   color: #555;
@@ -14,47 +22,6 @@ b {
   color: white;
 }
 
-.brand-logo {
-  opacity: 0.85;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-@media #{$large-and-up} {
-  .brand-logo {
-    margin-left: 2em;
-  }
-}
-
-.right {
-  margin-right: 3em;
-
-  li > a {
-    text-transform: uppercase;
-  }
-}
-
-.intro {
-  text-align: center;
-}
-
-.side-nav {
-  padding-top: 2.5em;
-}
-
-.side-nav > li > a {
-  color: #555;
-  font-size: 1.6em;
-  font-weight: 300;
-
-  // padding-left: 2em;
-  // text-align: center;
-  // line-height: 1.6em;
-  // text-transform: lowercase;
-}
-
-.button-collapse {
-  cursor: pointer;
+.back-btn {
+  margin-top: 1em;
 }

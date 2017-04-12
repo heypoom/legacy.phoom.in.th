@@ -1,0 +1,29 @@
+- var pages = {"/": "about me", "/resume": "resume", "/blog": "blog", "/labs": "labs", "/startup": "startup", "/contact": "contact"}
+
+mixin links(current)
+  each name, link in pages
+    li(class=link === current ? "active" : "")
+      a(href=link)=name
+
+mixin nav(page)
+  .hide-on-large-only
+    a.button-collapse(data-activates="mobile-nav")
+      i.material-icons menu
+    ul.nav-links.side-nav#mobile-nav
+      +links(page)
+  nav.hide-on-med-and-down
+    .nav-wrapper
+      a.brand-logo(href="/")
+        span PHOOMPARIN
+        b MANO
+      ul.nav-links.right
+        +links(page)
+
+mixin header(page)
+  header.landing.light-blue.darken-3.white-text.z-depth-1
+    img.circle.responsive-img(src="/img/me.jpg")
+    h1
+      span PHOOMPARIN
+      b MANO
+    h2 Full Stack Developer
+    +nav(page)

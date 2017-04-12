@@ -14,9 +14,14 @@ block meta
   title Startup Potion: MVPs that investors love.
 
 block body
-  +nav("/startup.html")
+  +header("/startup")
   main
     section.startup
       .container
-        h1 STARTUP<b>POTION</b>: <small>MVPs for your Startups!</small>
-        h5 MVP is the secret potion, they'll make investors fall in love~!
+        .row
+          .col.m4.s12
+            .center
+              img.potion(src="img/flask.blue.svg")
+          .col.m8.s12
+            h1 STARTUP<b>POTION</b>
+            h5 MVP is the secret potion, they'll make investors fall in love~!

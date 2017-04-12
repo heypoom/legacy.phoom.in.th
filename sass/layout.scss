@@ -1,0 +1,121 @@
+@import "materialize.scss";
+@import "variables.scss";
+
+header.landing {
+  width: 100%;
+  padding: 3em;
+  text-align: center;
+
+  img {
+    max-height: 140px;
+    box-shadow: $zLite;
+  }
+
+  h1 {
+    opacity: .8;
+    font-size: 2.3em;
+  }
+
+  h2 {
+    margin: 0;
+    opacity: .8;
+    font-size: 1.5em;
+  }
+
+  nav {
+    background: transparent;
+    box-shadow: none;
+    margin-top: 0.5em;
+  }
+}
+
+nav {
+
+}
+
+.button-collapse {
+  position: fixed;
+  left: 1.8em;
+  top: 1.8em;
+
+  display: flex;
+  padding: 1em;
+
+  color: #555;
+  box-shadow: $z1;
+  background: white;
+  border-radius: 50%;
+}
+
+// .nav-bg {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//
+//   opacity: 0.1;
+//   // background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
+// }
+
+#sidenav-overlay {
+  z-index: 0;
+}
+
+a.brand-logo {
+  display: none !important;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media #{$large-and-up} {
+  .brand-logo {
+    margin-left: 2em;
+  }
+}
+
+ul.nav-links.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 0 5em;
+
+  float: none;
+  margin-top: 1em;
+  margin-right: 0;
+
+  li > a {
+    color: #efefef;
+    opacity: .9;
+    font-size: 2.1em;
+    text-transform: lowercase;
+  }
+
+  li:hover, li.active {
+    a {
+      opacity: 1;
+    }
+  }
+}
+
+
+.right {
+  margin-right: 3em;
+
+  li > a {
+    text-transform: uppercase;
+  }
+}
+
+.side-nav {
+  padding-top: 2.5em;
+
+  li > a {
+    color: #555;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
+}

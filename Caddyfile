@@ -1,0 +1,8 @@
+localhost:8081
+gzip
+root .
+ext .html
+
+errors {
+  * 404.html
+}
