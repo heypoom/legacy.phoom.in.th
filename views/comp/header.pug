@@ -2,7 +2,7 @@
 
 mixin links(current)
   each name, link in pages
-    li(class=link === current ? "active" : "")
+    li.link(class=link === current ? "active" : "")
       a(href=link target=link.startsWith("https://") ? "_blank" : "")= name
 
 mixin nav(page)
@@ -10,6 +10,15 @@ mixin nav(page)
     a.button-collapse(data-activates="mobile-nav")
       i.material-icons menu
     ul.nav-links.side-nav#mobile-nav
+      li
+        .userView
+          .background
+          a(href="#!")
+            img.circle(src="img/me.jpg")
+          a(href="#!")
+            span.white-text.name Phoomparin Mano
+          a(href="mailto:work@phoom.in.th")
+            span.white-text.email work@phoom.in.th
       +links(page)
   nav.hide-on-med-and-down
     .nav-wrapper

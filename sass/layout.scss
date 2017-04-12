@@ -1,13 +1,37 @@
 @import "materialize.scss";
 @import "variables.scss";
 
+.userView {
+  box-shadow: $zLite;
+  margin-bottom: 2em !important;
+  padding-bottom: 1em !important;
+  padding-left: 1.7em !important;
+
+  .background {
+    background-image: url(/img/march.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -2.5em;
+  }
+
+  a {
+    text-align: left;
+  }
+
+  a > img.circle {
+    box-shadow: $z1;
+    margin-top: -2em;
+    border: 2px solid white;
+  }
+}
+
 header.landing {
   width: 100%;
   padding: 3em;
   text-align: center;
   background: linear-gradient(to left, #7474BF, #348AC7);
 
-  img {
+  > img {
     max-height: 140px;
     box-shadow: $zLite;
     border: 3px solid white;
@@ -32,8 +56,14 @@ header.landing {
   }
 }
 
-nav {
+ul.nav-links.side-nav#mobile-nav {
+  padding-top: 2.5em;
 
+  li > a {
+    color: #555;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
 }
 
 .button-collapse {
@@ -110,15 +140,5 @@ ul.nav-links.right {
 
   li > a {
     text-transform: uppercase;
-  }
-}
-
-.side-nav {
-  padding-top: 2.5em;
-
-  li > a {
-    color: #555;
-    font-size: 1.6em;
-    font-weight: 300;
   }
 }
