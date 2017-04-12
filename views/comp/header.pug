@@ -1,9 +1,9 @@
-- var pages = {"/": "about me", "/resume": "resume", "/blog": "blog", "/labs": "labs", "/startup": "startup", "/contact": "contact"}
+- var pages = {"/": "about me", "/resume": "resume", "/labs": "works", "/startup": "hire", "https://medium.com/@phoomparin": "blog", "/contact": "contact"}
 
 mixin links(current)
   each name, link in pages
     li(class=link === current ? "active" : "")
-      a(href=link)=name
+      a(href=link target=link.startsWith("https://") ? "_blank" : "")= name
 
 mixin nav(page)
   .hide-on-large-only
