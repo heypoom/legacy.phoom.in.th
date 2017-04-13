@@ -1,35 +1,23 @@
 @import "materialize.scss";
 @import "variables.scss";
 
-.userView {
-  box-shadow: $zLite;
-  margin-bottom: 2em !important;
-  padding-bottom: 1em !important;
-  padding-left: 1.7em !important;
-
-  .background {
-    background-image: url(/img/march.jpg);
-    background-size: cover;
-    background-position: center;
-    margin-top: -2.5em;
-  }
-
-  a {
-    text-align: left;
-  }
-
-  a > img.circle {
-    box-shadow: $z1;
-    margin-top: -2em;
-    border: 2px solid white;
-  }
-}
-
 header.landing {
   width: 100%;
   padding: 3em;
   text-align: center;
+  position: relative;
   background: linear-gradient(to left, #7474BF, #348AC7);
+
+  > .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.05;
+    background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
+  }
 
   > img {
     max-height: 140px;
@@ -70,24 +58,16 @@ ul.nav-links.side-nav#mobile-nav {
   position: fixed;
   left: 1.8em;
   top: 1.8em;
+  z-index: 5;
 
   display: flex;
   padding: 1em;
 
-  color: #555;
+  color: #555; // #3789c6;
   box-shadow: $z1;
   background: white;
   border-radius: 50%;
 }
-
-// .nav-bg {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//
-//   opacity: 0.1;
-//   // background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
-// }
 
 #sidenav-overlay {
   z-index: 0;
@@ -140,5 +120,30 @@ ul.nav-links.right {
 
   li > a {
     text-transform: uppercase;
+  }
+}
+
+.userView {
+  box-shadow: $zLite;
+  margin-bottom: 2em !important;
+  padding-bottom: 1em !important;
+  padding-left: 1.7em !important;
+
+  .background {
+    background-color: #2d2d30;
+    background-image: url(/img/march.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -2.5em;
+  }
+
+  a {
+    text-align: left;
+  }
+
+  a > img.circle {
+    box-shadow: $z1;
+    margin-top: -2em;
+    border: 2px solid white;
   }
 }

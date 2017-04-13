@@ -1,6 +1,12 @@
 @import "materialize.scss";
 @import "variables.scss";
 
+section.landing {
+  h3 {
+    line-height: 1.3em;
+  }
+}
+
 section.landing-hero {
   display: flex;
   justify-content: center;
