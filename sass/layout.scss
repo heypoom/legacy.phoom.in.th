@@ -6,7 +6,9 @@ header.landing {
   padding: 3em;
   text-align: center;
   position: relative;
-  background: linear-gradient(to left, #7474BF, #348AC7);
+
+  background: linear-gradient(to left, rgb(71, 118, 230), rgb(142, 84, 233));
+  // background: linear-gradient(to left, #7474BF, #348AC7);
 
   > .bg {
     position: absolute;

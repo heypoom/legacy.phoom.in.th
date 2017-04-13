@@ -1,5 +1,16 @@
 include header
 
+mixin info
+  meta(name="author" content="Phoomparin Mano")
+  meta(name="application-name" content="Phoomparin Mano")
+  meta(name="apple-mobile-web-app-capable" content="yes")
+  meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+  meta(name="apple-mobile-web-app-title" content="Phoomparin Mano")
+  meta(name="theme-color" content="#785fe8")
+  link(rel="icon" href="/img/favicon.ico")
+  link(rel="shortcut icon" href="/img/favicon.png")
+  link(rel="canonical" href="https://phoom.in.th")
+
 mixin styles
   link(rel="stylesheet" href="css/main.css")
   link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
@@ -8,18 +19,21 @@ mixin styles
 mixin scripts
   script(src="https://code.jquery.com/jquery-3.2.1.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js")
-  //- script(src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js")
   script(src="js/pjax.js")
   script(src="js/main.js")
+
+//- script(src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js")
 
 doctype html
 html
   head
     meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0")
     block meta
       title Phoomparin Mano - Full Stack Developer
       meta(description="")
+    +info
     +styles
   body
     block body
