@@ -23,6 +23,32 @@ b {
   color: white;
 }
 
+.footerIcons {
+  width: 2.5em;
+  height: 2.5em;
+
+  fill: white;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+p.md-text {
+  margin-top: 0;
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.o8 {
+  opacity: .8;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
 .material-icons.prefix {
   bottom: 0.9em;
 }
