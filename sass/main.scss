@@ -3,7 +3,7 @@
 
 @import "header.scss";
 
-@import "startup.scss";
+@import "contact.scss";
 @import "landing.scss";
 
 main {
@@ -21,6 +21,10 @@ b {
 ::selection {
   background: transparentize(#13a7c0, 0.4);
   color: white;
+}
+
+footer {
+  box-shadow: 0 -4px 7px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .footerIcons {

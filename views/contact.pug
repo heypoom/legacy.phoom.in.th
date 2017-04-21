@@ -3,51 +3,38 @@ extends comp/page
 block meta
   title Resume | Phoomparin Mano
 
-mixin startupPotion
-  section
-    .container
-      .nice
-        .indic
-        h1.center
-          span STARTUP
-          b POTION
-      .fsd-label
-        span We make MVPs that <br> everyone loves.
-        .inner
-
 block body
   +header("/contact")
   main
-    section
-      .container
-        .row
-          .col.m6.s12
-            section.landing
-              h4 Contact Information
-              p
-                | Name: Phoomparin Mano <br>
-                | E-mail: <a href="mailto:work@phoom.in.th">work@phoom.in.th</a> <br>
-                | Website: <a href="https://phoom.in.th">phoom.in.th</a> <br>
-                | GitHub: <a href="https://github.com/phoomparin">github.com/phoomparin</a> <br>
-                | Facebook: <a href="https://facebook.com/phoomparin.mano">fb.me/phoomparin.mano</a> <br>
-                | LinkedIn: <a href="https://linkedin.com/phoomparin">linkedin.com/phoomparin</a>
-          .col.m6.s12
-            form.contact-form
-              .input-field
-                i.material-icons.prefix account_circle
-                input.validate#name(placeholder="Mr. Adam Smith" type="text")
-                label.active(for="name") What is your name?
-              .input-field
-                i.material-icons.prefix email
-                input.validate#email(placeholder="name@example.com" type="email")
-                label.active(for="email" data-error="That e-mail doesn't seem right.") What is your e-mail address?
-              .input-field
-                i.material-icons.prefix mode_edit
-                textarea.validate.materialize-textarea#message
-                label(for="message") What would you like to tell me?
-              .center
-                button.btn.blue.waves-effect.waves-light.send Send Message
-                  i.material-icons.left message
+    .container
+      .row
+        .col.m6.s12
+          section.landing
+            h4 Contact Information
+            p
+              | Name: Phoomparin Mano <br>
+              | E-mail: <a href="mailto:work@phoom.in.th">work@phoom.in.th</a> <br>
+              | Website: <a href="https://phoom.in.th">phoom.in.th</a> <br>
+              | GitHub: <a href="https://github.com/phoomparin">github.com/phoomparin</a> <br>
+              | Facebook: <a href="https://facebook.com/phoomparin.mano">fb.me/phoomparin.mano</a> <br>
+              | LinkedIn: <a href="https://linkedin.com/phoomparin">linkedin.com/phoomparin</a>
+        .col.m6.s12
+          form.contact-form
+            .input-field
+              i.material-icons.prefix account_circle
+              input.validate#name(placeholder="Mr. Adam Smith" type="text")
+              label.active(for="name") What is your name?
+            .input-field
+              i.material-icons.prefix email
+              input.validate#email(placeholder="name@example.com" type="email")
+              label.active(for="email" data-error="That e-mail doesn't seem right.") What is your e-mail address?
+            .input-field
+              i.material-icons.prefix mode_edit
+              textarea.validate.materialize-textarea#message
+              label(for="message") What would you like to tell me?
+            .center
+              button.btn.blue.waves-effect.waves-light.send Send Message
+                i.material-icons.left message
     section.startup
       .container
         .row
