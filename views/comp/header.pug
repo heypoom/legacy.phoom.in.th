@@ -1,4 +1,4 @@
-- var pages = {"/": "about me", "/resume": "resume", "/labs": "works", "/startup": "hire", "https://medium.com/@phoomparin": "blog", "/contact": "contact"}
+- var pages = {"/": "about", "/resume": "resume", "/portfolio": "portfolio", "/contact": "contact"}
 
 mixin links(current)
   each name, link in pages
@@ -6,7 +6,7 @@ mixin links(current)
       a(href=link target=link.startsWith("https://") ? "_blank" : "")= name
 
 mixin nav(page)
-  .hide-on-large-only
+  aside.hide-on-med-and-up
     a.button-collapse(data-activates="mobile-nav")
       i.material-icons menu
     ul.nav-links.side-nav#mobile-nav
@@ -20,7 +20,7 @@ mixin nav(page)
           a(href="mailto:work@phoom.in.th")
             span.white-text.email work@phoom.in.th
       +links(page)
-  nav.hide-on-med-and-down
+  nav.hide-on-small-only
     .nav-wrapper
       a.brand-logo(href="/")
         span PHOOMPARIN
@@ -29,9 +29,9 @@ mixin nav(page)
         +links(page)
 
 mixin header(page)
-  header.landing.white-text.z-depth-1
+  header.hero.white-text.z-depth-1
     .bg
-    img.circle.responsive-img(src="/img/me.jpg")
+    .profile.circle
     h1
       span PHOOMPARIN
       b MANO

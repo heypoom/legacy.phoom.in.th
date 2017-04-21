@@ -5,7 +5,7 @@ toolbox.precache([
   "/", "404.html",
   "css/main.css",
   "img/flask.blue.svg", "img/me.jpg",
-  "js/pjax.js", "js/main.js",
+  "js/pjax.js", "js/main.js", "js/sw-toolbox.js", "js/sw-toolbox-cache.js",
   "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://code.jquery.com/jquery-3.2.1.min.js",
@@ -22,13 +22,13 @@ self.addEventListener("activate", function activate(e) {
   e.waitUntil(self.clients.claim())
 })
 
-toolbox.router.get("/(.*)", function(req, vals, opts) {
+toolbox.router.get("/(.*)", function get(req, vals, opts) {
   return toolbox.networkFirst(req, vals, opts)
     .catch(function(error) {
       if (req.method === "GET" && req.headers.get("accept").includes("text/html")) {
         return toolbox.cacheOnly(new Request("/404.html"), vals, opts)
       }
-      throw error;
+      throw error
     })
 })
 

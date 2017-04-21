@@ -1,0 +1,207 @@
+@import "materialize.scss";
+@import "variables.scss";
+
+a.brand-logo {
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Header Navigation. Heavily Inspired by webonise.co.uk!
+header.hero {
+  width: 100%;
+  padding: 3em;
+  text-align: center;
+  position: relative;
+
+  background: linear-gradient(to left, rgb(71, 118, 230), rgb(142, 84, 233));
+
+  // Header Texture, shamelessly borrowed from shopify ;)
+  > .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.05;
+    background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
+  }
+
+  // Profile Picture!
+  > .profile {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1.8em;
+
+    width: 130px;
+    height: 130px;
+    box-shadow: $zLite;
+    border: 3px solid white;
+
+    background-color: white;
+    background-image: url("/img/me.jpg");
+    background-size: cover;
+  }
+
+  h1, h2 {
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  nav {
+    background: transparent;
+    box-shadow: none;
+    margin-top: 0.5em;
+  }
+}
+
+header.hero > nav {
+  // Header Navigation
+  ul.nav-links.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: 0;
+
+    float: none;
+    margin-top: 1em;
+    margin-right: 0;
+
+    li > a {
+      color: #efefef;
+      opacity: .9;
+      font-size: 2.1em;
+      text-transform: lowercase;
+    }
+
+    li:hover, li.active {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  a.brand-logo {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 800px) {
+    ul.nav-links.right {
+      padding: 0 5em;
+    }
+  }
+
+  @media #{$large-and-up} {
+    ul.nav-links.right {
+      padding: 0 8em;
+    }
+  }
+}
+
+header.hero > aside {
+  // Mobile Sidebar Navigation
+  ul.nav-links.side-nav#mobile-nav {
+    padding-top: 2.5em;
+
+    li > a {
+      color: #555;
+      font-size: 1.6em;
+      font-weight: 300;
+    }
+  }
+
+  // Mobile Sidebar Open Button
+  .button-collapse {
+    position: fixed;
+    left: 1.8em;
+    top: 1.8em;
+    z-index: 5;
+
+    display: flex;
+    height: 3.7em;
+    width: 3.7em;
+    padding: 1em;
+
+    color: #555; // #3789c6;
+    box-shadow: $z1;
+    background: white;
+    border-radius: 50%;
+  }
+
+  #sidenav-overlay {
+    z-index: 0;
+  }
+
+  // Sidebar Decoration Header
+  .userView {
+    box-shadow: $zLite;
+    margin-bottom: 2em !important;
+    padding-bottom: 1em !important;
+    padding-left: 1.7em !important;
+
+    .background {
+      background-color: #2d2d30;
+      background-image: url(/img/march.jpg);
+      background-size: cover;
+      background-position: center;
+      margin-top: -2.5em;
+    }
+
+    a {
+      text-align: left;
+    }
+
+    a > img.circle {
+      box-shadow: $z1;
+      margin-top: -2em;
+      border: 2px solid white;
+    }
+  }
+}
+
+header:not(.hero) > nav {
+  // Left Nav
+  @media #{$large-and-up} {
+    .brand-logo {
+      margin-left: 2em;
+    }
+  }
+
+  @media #{$medium-and-down} {
+    ul.nav-links.right {
+      display: none;
+    }
+  }
+
+  // Right Nav
+  .right {
+    margin-right: 3em;
+
+    li > a {
+      text-transform: uppercase;
+    }
+  }
+}
+
+header:not(.hero) {
+  h1, h2, .bg, .profile {
+    display: none;
+  }
+}

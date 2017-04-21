@@ -1,6 +1,7 @@
 @import "materialize.scss";
 @import "variables.scss";
-@import "layout.scss";
+
+@import "header.scss";
 
 @import "startup.scss";
 @import "landing.scss";
@@ -20,6 +21,10 @@ b {
 ::selection {
   background: transparentize(#13a7c0, 0.4);
   color: white;
+}
+
+.material-icons.prefix {
+  bottom: 0.9em;
 }
 
 .back-btn {
