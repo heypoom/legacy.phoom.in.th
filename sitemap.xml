@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://phoom.in.th/</loc>
+  <lastmod>2017-04-23T14:47:14+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://phoom.in.th/resume</loc>
+  <lastmod>2017-04-23T14:26:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://phoom.in.th/portfolio</loc>
+  <lastmod>2017-04-23T14:26:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://phoom.in.th/contact</loc>
+  <lastmod>2017-04-23T14:26:55+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>
