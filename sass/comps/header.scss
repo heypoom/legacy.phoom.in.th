@@ -1,76 +1,18 @@
-@import "materialize.scss";
-@import "variables.scss";
-
 @import "nav.scss";
 
-header {
-  h1, h2 {
-    opacity: .8;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  h1 {
-    font-size: 2.3em;
-  }
-
-  h2 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-}
-
-// Simple Navigation Header.
-header.simple {
-  nav {
-    @media #{$large-and-up} {
-      .brand-logo {
-        margin-left: 2em;
-      }
-    }
-
-    // Left Nav
-    a.brand-logo {
-      opacity: 0.85;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-
-    @media #{$medium-and-down} {
-      ul.nav-links.right {
-        // display: none;
-      }
-    }
-
-    // Right Nav
-    .right {
-      margin-right: 3em;
-
-      li > a {
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
 // Circle Profile
-.profile.circle {
+.profile {
   position: relative;
   margin: 0 auto;
   margin-bottom: 1.8em;
 
   width: 130px;
   height: 130px;
-  box-shadow: $zLite;
   border: 3px solid white;
+  border-radius: 50%;
 
   background-color: white;
-  background-image: url("/img/me.min.jpg");
+  background-image: url("/img/profile.jpg");
   background-size: cover;
 }
 
@@ -85,6 +27,7 @@ header.hero {
 
   height: 70vh;
   min-height: 30em;
+  box-shadow: $z1;
 
   background-color: #333;
   background-image: url("/img/lonely_commute.min.jpg"); // mbp_code
@@ -92,8 +35,23 @@ header.hero {
   background-size: cover;
   background-position: center;
 
-  h1 {
+  h1, h2 {
+    opacity: .8;
     color: white;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    margin: 0.5em 0;
+    font-size: 2.3em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5em;
   }
 }
 
@@ -133,24 +91,7 @@ header.hero > .wrapper {
 }
 
 @media #{$small-and-down} {
-  header.hero > .wrapper > .profile.circle {
+  header.hero > .wrapper > .profile {
     margin-bottom: 4em !important;
-  }
-}
-
-footer.page-footer {
-  background: #353e48;
-  box-shadow: 0 -4px 7px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.footerIcons {
-  width: 2.5em;
-  height: 2.5em;
-
-  fill: white;
-  opacity: .7;
-
-  &:hover {
-    opacity: 1;
   }
 }

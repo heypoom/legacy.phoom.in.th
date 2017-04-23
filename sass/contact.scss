@@ -17,6 +17,7 @@ section.startup > .container {
   h5 {
     line-height: 1.2em;
   }
+  
   .potion {
     background: white;
     border-radius: 50%;
@@ -31,4 +32,22 @@ section.startup > .container {
       box-shadow: $z1;
     }
   }
+}
+
+@media #{$small-and-down} {
+  section.startup {
+    text-align: center;
+  }
+}
+
+.md-text {
+  margin-top: 0;
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+// Contact Form.
+
+form.contact-form {
+  padding-top: 0.8em;
 }

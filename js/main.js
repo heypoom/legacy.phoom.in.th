@@ -22,6 +22,4 @@ $("document").ready(function() {
     ],
     scrollTo: false
   })
-
-  $("#message").trigger("autoresize")
 })

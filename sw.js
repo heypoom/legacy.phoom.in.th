@@ -3,7 +3,7 @@ importScripts("js/sw-toolbox-cache.js")
 
 toolbox.precache([
   "/", "404.html",
-  "css/main.css",
+  "css/critical.css", "css/main.css",
   "img/flask.blue.svg", "img/me.min.jpg",
   "js/pjax.js", "js/main.js", "js/sw-toolbox.js", "js/sw-toolbox-cache.js",
   "https://fonts.googleapis.com/css?family=Roboto:300,400",

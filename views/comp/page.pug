@@ -16,9 +16,6 @@ mixin info
   link(rel="manifest" href="/manifest.json")
   link(rel="canonical" href="https://phoom.in.th")
 
-mixin styles
-  link(rel="stylesheet" href="/css/main.css")
-
 mixin fonts
   link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400")
   link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
@@ -48,8 +45,9 @@ html
     block meta
       title Phoomparin Mano - Full Stack Developer
     +info
-    +styles
+    link(rel="stylesheet" href="/css/critical.css" lazyload="1")
   body
     block body
+    link(rel="stylesheet" href="/css/main.css")
     +fonts
     +scripts

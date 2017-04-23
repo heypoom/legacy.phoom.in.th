@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+@import "comps/header.scss";
+@import "landing.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #555;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+main {
+  padding-top: 3em;
+}
+
+b {
+  font-weight: 400;
+}
+
+a {
+  color: #039be5;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+@media #{$medium-and-up} {
+  .container {
+    width: 85%;
+  }
+}
+
+@media #{$large-and-up} {
+  .container {
+    width: 70%;
+  }
+}
+
+.hide-on-small-only, .hide-on-small-and-down {
+  @media #{$small-and-down} {
+    display: none !important;
+  }
+}
+
+.hide-on-med-and-up {
+  @media #{$medium-and-up} {
+    display: none !important;
+  }
+}

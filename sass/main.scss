@@ -1,32 +1,17 @@
 @import "materialize.scss";
 @import "variables.scss";
 
-@import "header.scss";
+@import "comps/aside.scss";
 
 @import "contact.scss";
-@import "landing.scss";
-
-main {
-  padding-top: 3em;
-}
-
-body {
-  color: #555;
-}
-
-b {
-  font-weight: 400;
-}
 
 ::selection {
   background: transparentize(#13a7c0, 0.4);
   color: white;
 }
 
-p.md-text {
-  margin-top: 0;
-  font-size: 1.3em;
-  line-height: 1.6em;
+.drag-target {
+  width: 10px !important;
 }
 
 .o8 {
@@ -51,4 +36,21 @@ p.md-text {
   padding: 0.7em;
   background: white;
   border: 2px solid #0277bd;
+}
+
+footer.page-footer {
+  background: #353e48;
+  box-shadow: 0 -4px 7px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footerIcons {
+  width: 2.5em;
+  height: 2.5em;
+
+  fill: white;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
 }

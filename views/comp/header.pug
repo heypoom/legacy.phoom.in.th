@@ -14,7 +14,7 @@ mixin nav(page)
         .userView
           .background
           a(href="#!")
-            img.circle(src="/img/me.min.jpg" alt="Profile")
+            img.circle(src="/img/profile.jpg" alt="Profile")
           a(href="#!")
             span.white-text.name Phoomparin Mano
           a(href="mailto:work@phoom.in.th")
@@ -22,20 +22,17 @@ mixin nav(page)
       +links(page)
   nav.hide-on-small-only
     .nav-wrapper
-      a.brand-logo(href="/")
-        span PHOOMPARIN
-        b MANO
       ul.nav-links.right
         +links(page)
 
 mixin header(page)
-  header.hero.white-text.z-depth-1
+  header.hero.white-text
     .overlay
     .wrapper
       if block
         block
       else
-        .profile.circle
+        .profile.z-depth-1
         h1 PHOOMPARIN<b>MANO</b>
         h2 Full Stack Developer
         //- a.btn.s-btn.waves-effect.waves-light Contact Me

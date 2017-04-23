@@ -1,6 +1,3 @@
-@import "materialize.scss";
-@import "variables.scss";
-
 section.landing {
   h1 {
     text-transform: uppercase;
@@ -30,23 +27,4 @@ section.landing {
     font-size: 1.25em;
     line-height: 1.6em;
   }
-}
-
-section.landing-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-@media #{$small-and-down} {
-  div.landing-hero, section.startup {
-    text-align: center;
-  }
-}
-
-// Contact Form.
-
-form.contact-form {
-  padding-top: 0.8em;
 }
