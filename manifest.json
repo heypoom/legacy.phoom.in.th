@@ -1,5 +1,5 @@
 {
-  "short_name": "Phoomparin Mano",
+  "short_name": "Phoomparin",
   "name": "Phoomparin Mano",
   "icons": [{
     "src": "img/android-icon-96x96.png",
@@ -14,7 +14,7 @@
     "sizes": "192x192",
     "type": "image/png"
   }],
-  "start_url": "/",
+  "start_url": "/?utm_source=homescreen",
   "background_color": "#353e48",
   "theme_color": "#353e48",
   "display": "standalone"

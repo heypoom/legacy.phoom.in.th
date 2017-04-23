@@ -4,7 +4,7 @@ importScripts("js/sw-toolbox-cache.js")
 toolbox.precache([
   "/", "404.html",
   "css/main.css",
-  "img/flask.blue.svg", "img/me.jpg",
+  "img/flask.blue.svg", "img/me.min.jpg",
   "js/pjax.js", "js/main.js", "js/sw-toolbox.js", "js/sw-toolbox-cache.js",
   "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
@@ -36,6 +36,7 @@ toolbox.router.get("/css/*.css", toolbox.fastest)
 toolbox.router.get("/js/*.js", toolbox.fastest)
 toolbox.router.get("/fonts/*", toolbox.fastest)
 toolbox.router.get("/img/.jpg", toolbox.fastest)
+toolbox.router.get("/img/.webp", toolbox.fastest)
 toolbox.router.get("/img/*.svg", toolbox.fastest)
 toolbox.router.get("/img/*.png", toolbox.fastest)
 toolbox.router.get("/browserconfig.xml", toolbox.fastest)
