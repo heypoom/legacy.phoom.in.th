@@ -1,14 +1,6 @@
 @import "materialize.scss";
 @import "variables.scss";
 
-.cf {
-  background-image: linear-gradient(to left, rgb(255, 81, 47), rgb(221, 36, 118));
-}
-
-form.contact-form {
-  padding-top: 0.8em;
-}
-
 section.landing {
   h1 {
     text-transform: uppercase;
@@ -53,103 +45,8 @@ section.landing-hero {
   }
 }
 
-div.landing-hero {
-  width: 100%;
+// Contact Form.
 
-  h1 {
-    font-size: 3em;
-    background: white;
-    padding: 0.2em 0;
-    max-width: 10.5em;
-    color: #555; // $blue;
-    margin: 0 auto;
-    margin-top: 1em;
-    text-align: center;
-    box-shadow: $zLite;
-    border: 2px solid $blue;
-  }
-
-  .potion {
-    position: relative;
-    margin: 0 auto;
-
-    background: white;
-    border-radius: 50%;
-    width: 7em;
-    height: 7em;
-    padding: 0.9em;
-    box-shadow: $z1;
-    border: 2.5px solid $blue;
-  }
-}
-
-section.next {
-
-}
-
-@keyframes hue-rotate {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
-
-.nice {
-  position: relative;
-  z-index: 1;
-
-  padding: 1.2em;
-  color: color("blue-grey", "base");
-  background: white;
-  box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12);
-  max-width: 28em;
-  margin: 0 auto;
-  border: 2px solid color("blue-grey", "lighten-1");
-
-  h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-}
-
-.fsd-label {
-  font-size: 1.5em;
-  background: color("blue-grey", "lighten-1");
-  color: white;
-  max-width: 15em;
-  padding: 0.5em;
-  box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12);
-  margin: 0 auto;
-  // margin-top: -0.2em;
-
-  transition: 0.45s ease-in-out all;
-  user-select: none;
-  position: relative;
-
-  display: flex;
-  height: 5em;
-  align-items: flex-end;
-  text-align: center;
-  justify-content: center;
-  transform: translateY(-1em);
-
-  .inner {
-    position: absolute;
-    top: 0em;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 0.35em;
-    background: color("teal", "lighten-3");
-    // transition: 0.45s ease-in-out all;
-    // box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12);
-  }
-
-  &:hover {
-    // padding-top: 1.2em;
-    transform: translateY(0);
-  }
+form.contact-form {
+  padding-top: 0.8em;
 }

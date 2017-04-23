@@ -30,10 +30,13 @@ mixin nav(page)
 
 mixin header(page)
   header.hero.white-text.z-depth-1
-    .bg
-    .profile.circle
-    h1
-      span PHOOMPARIN
-      b MANO
-    h2 Full Stack Developer
+    .overlay
+    .wrapper
+      if block
+        block
+      else
+        .profile.circle
+        h1 PHOOMPARIN<b>MANO</b>
+        h2 Full Stack Developer
+        //- a.btn.s-btn.waves-effect.waves-light Contact Me
     +nav(page)

@@ -1,0 +1,106 @@
+// Large Navigation in Header.
+// This is heavily inspired by webonise.co.uk!
+nav:not(.simple) {
+  ul.nav-links.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: 0;
+
+    float: none;
+    margin-top: 1em;
+    margin-right: 0;
+
+    li > a {
+      color: #efefef;
+      opacity: .9;
+      font-size: 2.1em;
+      text-transform: lowercase;
+    }
+
+    li:hover, li.active {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  a.brand-logo {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 800px) {
+    ul.nav-links.right {
+      padding: 0 5em;
+    }
+  }
+
+  @media #{$large-and-up} {
+    ul.nav-links.right {
+      padding: 0 8em;
+    }
+  }
+}
+
+// Mobile Sidebar Navigation
+aside {
+  ul.nav-links.side-nav#mobile-nav {
+    padding-top: 2.5em;
+
+    li > a {
+      color: #555;
+      font-size: 1.6em;
+      font-weight: 300;
+    }
+  }
+
+  // Mobile Sidebar Open Button
+  .button-collapse {
+    position: fixed;
+    left: 1.8em;
+    top: 1.8em;
+    z-index: 5;
+
+    display: flex;
+    height: 3.7em;
+    width: 3.7em;
+    padding: 1em;
+
+    color: #555; // #3789c6;
+    box-shadow: $z1;
+    background: white;
+    border-radius: 50%;
+  }
+
+  #sidenav-overlay {
+    z-index: 0;
+  }
+
+  // Sidebar Decoration Header
+  .userView {
+    box-shadow: $zLite;
+    margin-bottom: 2em !important;
+    padding-bottom: 1em !important;
+    padding-left: 1.7em !important;
+
+    .background {
+      background-color: #2d2d30;
+      background-image: url("/img/mbp_code.min.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-top: -2.5em;
+    }
+
+    a {
+      text-align: left;
+    }
+
+    a > img.circle {
+      box-shadow: $z1;
+      margin-top: -2em;
+      border: 2px solid white;
+    }
+  }
+}

@@ -6,54 +6,73 @@ block meta
 block body
   +header("/resume")
   main
-    section.resume
-      .container
-        .row
-          .col.m6
-            .card
-              .card-content
-                h3 Awards &amp; Achievements
+    .container
+      section.timeline
+        h3 Timeline
+        p ...
 
-                ul
-                  li National Software Contest #19 (2017) by NECTEC: 1st Place Winner (National)
-                  //- li Axi Platform &amp; PrintAt
-                  li National Software Contest #18 (2016) by NECTEC: 2nd Place Winner (National)
-                  //- li FlipED &amp; vSchool
-                  li Student Software Contest #66 (2017) by OBEC: 3rd Place Winner (National)
-                  //- li PrintAt
-                  li Student Software Contest #65 (2016) by OBEC: 1st Place Winner (National)
-                  //- li vSchool
-                  li Student Programming Contest #64 (2015) by OBEC: Gold Medal
-          .col.m6
+      section.awards
+        h3 Awards &amp; Achievements
+
+        //- NSC2017
+        .row
+          .col.s12
             .card
               .card-content
-                h4 Experiences
+                p National Software Contest #19 (2017) by NECTEC: 1st Place Winner (National)
+
+        //- NSC2016
+        .row
+          .col.s12
+            .card
+              .card-content
+                p National Software Contest #18 (2016) by NECTEC: 2nd Place Winner (National)
+
+        //- OBEC
+        .row
+          .col.m4.s12
+            .card
+              .card-content
+                p Student Software Contest #66 (2017) by OBEC: 3rd Place Winner (National)
+          .col.m4.s12
+            .card
+              .card-content
+                p Student Software Contest #65 (2016) by OBEC: 1st Place Winner (National)
+          //- li Student Programming Contest #64 (2015) by OBEC: Gold Medal
+
+      section.experiences
+        h4 Experiences
+        .row
+          .col.m4
+            .card
+              .card-content
                 ul
                   li Will be interning at iTAX for The Internship Program 2017
                   li Torkla Project #4 (2016) by SCB Foundation: Successfully Completed
                   li Speaker at SEC on the topic of DevOps and Kubernetes
                   li Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest 2016
 
-
-        .card
-          .card-content
-            h4 Hackathons
-            .row
-              .col.m6
-                ul
-                  li UHack Thammasart Hackathon by Enterprise Lab: Best E-Payment Award Winner
-                  li YSetter Reality Hackathon at 3DS Interactive: 1st Place Winner
-                  li Local Hack Day Hackathon by Enterprise Lab: 2nd Place Winner
-              .col.m6
-                ul
-                  li PrintAt Prototype (Local Hack Day)
-                    li GitHub: github.com/phoomparin/PrintAt-proto
-
-                  li NongTuu Prototype: Instant Lawyer bot (YSetter Reality)
-                    li GitHub: github.com/phoomparin/nongtuu
-
-                  li HotelSuite: Instant Hotel Check-In and Room Control (UHack TU)
-                    li GitHub: github.com/phoomparin/HotelSuite-proto
+      section.hackathons
+        h4 Hackathons
+        .row
+          .col.m4.s12
+            .card
+              .card-content
+                p UHack Thammasart Hackathon by Enterprise Lab: Best E-Payment Award Winner
+                p HotelSuite: Instant Hotel Check-In and Room Control (UHack TU)
+                p GitHub: github.com/phoomparin/HotelSuite-proto
+          .col.m4.s12
+            .card
+              .card-content
+                p YSetter Reality Hackathon at 3DS Interactive: 1st Place Winner
+                p NongTuu Prototype: Instant Lawyer bot (YSetter Reality)
+                p GitHub: github.com/phoomparin/nongtuu
+          .col.m4.s12
+            .card
+              .card-content
+                p Local Hack Day Hackathon by Enterprise Lab: 2nd Place Winner
+                p PrintAt Prototype (Local Hack Day)
+                p GitHub: github.com/phoomparin/PrintAt-proto
 
         a#stack
         .card

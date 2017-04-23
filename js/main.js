@@ -16,8 +16,9 @@ $("document").ready(function() {
 
   var pjax = new Pjax({
     selectors: [
-      "title", "ul.nav-links.right > li.link ",
-      "ul.side-nav > li.link", "main"
+      "title", "main",
+      "ul.nav-links.right > li.link ",
+      "ul.side-nav > li.link",
     ],
     scrollTo: false
   })

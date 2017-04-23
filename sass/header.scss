@@ -1,51 +1,9 @@
 @import "materialize.scss";
 @import "variables.scss";
 
-a.brand-logo {
-  opacity: 0.85;
+@import "nav.scss";
 
-  &:hover {
-    opacity: 1;
-  }
-}
-
-// Header Navigation. Heavily Inspired by webonise.co.uk!
-header.hero {
-  width: 100%;
-  padding: 3em;
-  text-align: center;
-  position: relative;
-
-  background: linear-gradient(to left, rgb(71, 118, 230), rgb(142, 84, 233));
-
-  // Header Texture, shamelessly borrowed from shopify ;)
-  > .bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    opacity: 0.05;
-    background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
-  }
-
-  // Profile Picture!
-  > .profile {
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 1.8em;
-
-    width: 130px;
-    height: 130px;
-    box-shadow: $zLite;
-    border: 3px solid white;
-
-    background-color: white;
-    background-image: url("/img/me.jpg");
-    background-size: cover;
-  }
-
+header {
   h1, h2 {
     opacity: .8;
 
@@ -62,146 +20,137 @@ header.hero {
     margin: 0;
     font-size: 1.5em;
   }
-
-  nav {
-    background: transparent;
-    box-shadow: none;
-    margin-top: 0.5em;
-  }
 }
 
-header.hero > nav {
-  // Header Navigation
-  ul.nav-links.right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    padding: 0;
-
-    float: none;
-    margin-top: 1em;
-    margin-right: 0;
-
-    li > a {
-      color: #efefef;
-      opacity: .9;
-      font-size: 2.1em;
-      text-transform: lowercase;
+// Simple Navigation Header.
+header.simple {
+  nav {
+    @media #{$large-and-up} {
+      .brand-logo {
+        margin-left: 2em;
+      }
     }
 
-    li:hover, li.active {
-      a {
+    // Left Nav
+    a.brand-logo {
+      opacity: 0.85;
+
+      &:hover {
         opacity: 1;
       }
     }
-  }
 
-  a.brand-logo {
-    display: none !important;
-  }
 
-  @media screen and (min-width: 800px) {
-    ul.nav-links.right {
-      padding: 0 5em;
-    }
-  }
-
-  @media #{$large-and-up} {
-    ul.nav-links.right {
-      padding: 0 8em;
-    }
-  }
-}
-
-header.hero > aside {
-  // Mobile Sidebar Navigation
-  ul.nav-links.side-nav#mobile-nav {
-    padding-top: 2.5em;
-
-    li > a {
-      color: #555;
-      font-size: 1.6em;
-      font-weight: 300;
-    }
-  }
-
-  // Mobile Sidebar Open Button
-  .button-collapse {
-    position: fixed;
-    left: 1.8em;
-    top: 1.8em;
-    z-index: 5;
-
-    display: flex;
-    height: 3.7em;
-    width: 3.7em;
-    padding: 1em;
-
-    color: #555; // #3789c6;
-    box-shadow: $z1;
-    background: white;
-    border-radius: 50%;
-  }
-
-  #sidenav-overlay {
-    z-index: 0;
-  }
-
-  // Sidebar Decoration Header
-  .userView {
-    box-shadow: $zLite;
-    margin-bottom: 2em !important;
-    padding-bottom: 1em !important;
-    padding-left: 1.7em !important;
-
-    .background {
-      background-color: #2d2d30;
-      background-image: url(/img/march.jpg);
-      background-size: cover;
-      background-position: center;
-      margin-top: -2.5em;
+    @media #{$medium-and-down} {
+      ul.nav-links.right {
+        // display: none;
+      }
     }
 
-    a {
-      text-align: left;
-    }
+    // Right Nav
+    .right {
+      margin-right: 3em;
 
-    a > img.circle {
-      box-shadow: $z1;
-      margin-top: -2em;
-      border: 2px solid white;
+      li > a {
+        text-transform: uppercase;
+      }
     }
   }
 }
 
-header:not(.hero) > nav {
-  // Left Nav
-  @media #{$large-and-up} {
-    .brand-logo {
-      margin-left: 2em;
-    }
-  }
+// Circle Profile
+.profile.circle {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 1.8em;
 
-  @media #{$medium-and-down} {
-    ul.nav-links.right {
-      display: none;
-    }
-  }
+  width: 130px;
+  height: 130px;
+  box-shadow: $zLite;
+  border: 3px solid white;
 
-  // Right Nav
-  .right {
-    margin-right: 3em;
+  background-color: white;
+  background-image: url("/img/me.jpg");
+  background-size: cover;
+}
 
-    li > a {
-      text-transform: uppercase;
-    }
+header.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  text-align: center;
+
+  height: 70vh;
+  min-height: 30em;
+
+  background-color: #333;
+  background-image: url("/img/lonely_commute.min.jpg"); // mbp_code
+  // background-image: linear-gradient(to left, rgb(71, 118, 230), rgb(142, 84, 233));
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    color: white;
   }
 }
 
-header:not(.hero) {
-  h1, h2, .bg, .profile {
-    display: none;
+header.hero > .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: black; // #333
+  // background-image: url("//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?12295265317662713736");
+  // background: linear-gradient(to left, rgb(71, 118, 230), rgb(142, 84, 233));
+  opacity: 0.7;
+}
+
+header.hero > nav {
+  position: absolute; // Or fixed
+  left: 0;
+  bottom: 2.5em;
+  z-index: 1;
+
+  background: transparent;
+  box-shadow: none;
+  padding: 0 3em;
+}
+
+header.hero > .wrapper {
+  z-index: 1;
+}
+
+@media #{$medium-and-up} {
+  header.hero > .wrapper {
+    padding-bottom: 9.5vh;
+  }
+}
+
+@media #{$small-and-down} {
+  header.hero > .wrapper > .profile.circle {
+    margin-bottom: 4em !important;
+  }
+}
+
+footer.page-footer {
+  background: #353e48;
+  box-shadow: 0 -4px 7px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footerIcons {
+  width: 2.5em;
+  height: 2.5em;
+
+  fill: white;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
   }
 }
