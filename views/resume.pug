@@ -3,173 +3,174 @@ extends comp/page
 block meta
   title Resume | Phoomparin Mano
 
+mixin downloads
+  .container
+    section.cv-downloads
+      h3 My full CV and Résumé (Downloadable PDF format)
+      p.large-text
+        | If you're looking for the downloadable PDF version, my full CV (Curriculum Vitae)
+        | and résumé is available for download in the PDF format. To clarify, the CV is the
+        | full record of my career experiences, and the résumé is the brief summary of myself.
+
+mixin timeline
+  .container
+    section.timeline
+      h3 Timelines and Experiences
+      p
+        | Will be interning at iTAX for The Internship Program 2017
+        | Torkla Project #4 (2016) by SCB Foundation: Successfully Completed
+        | Speaker at SEC on the topic of DevOps and Kubernetes
+        | Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest 2016
+
+mixin awards
+  .container
+    section.awards
+      h3 Awards &amp; Achievements
+      .row
+        .col.s12
+          .card
+            .card-content
+              p National Software Contest #19 (2017) by NECTEC: 1st Place Winner (National)
+      .row
+        .col.s12
+          .card
+            .card-content
+              p National Software Contest #18 (2016) by NECTEC: 2nd Place Winner (National)
+      .row
+        .col.m4.s12
+          .card
+            .card-content
+              p Student Software Contest #66 (2017) by OBEC: 3rd Place Winner (National)
+        .col.m4.s12
+          .card
+            .card-content
+              p Student Software Contest #65 (2016) by OBEC: 1st Place Winner (National)
+        .col.m4.s12
+          .card
+            .card-content
+              p Student Programming Contest #64 (2015) by OBEC: Gold Medal
+
+      .row
+        .col.m4.s12
+          .card
+            .card-content
+              p UHack Thammasart Hackathon by Enterprise Lab: Best E-Payment Award Winner
+              p HotelSuite: Instant Hotel Check-In and Room Control (UHack TU)
+              p GitHub: github.com/phoomparin/HotelSuite-proto
+        .col.m4.s12
+          .card
+            .card-content
+              p YSetter Reality Hackathon at 3DS Interactive: 1st Place Winner
+              p NongTuu Prototype: Instant Lawyer bot (YSetter Reality)
+              p GitHub: github.com/phoomparin/nongtuu
+        .col.m4.s12
+          .card
+            .card-content
+              p Local Hack Day Hackathon by Enterprise Lab: 2nd Place Winner
+              p PrintAt Prototype (Local Hack Day)
+              p GitHub: github.com/phoomparin/PrintAt-proto
+
+mixin projects
+  .container
+    section.projects
+      h4 Project Portfolio
+      .row
+        .col.m6.s12
+          .card
+            .card-content
+              h5 Axi Platform (2017)
+              p.
+                High Availability Physical Web Solutions Platform (Feathers &amp; Docker)
+                One Tap Interaction with Progressive Web Apps (React &amp; Redux)
+                Turn IoT Devices into Eddystone Beacons to use with Nearby Notifications
+                GitHub: github.com/phoomparin/Axi
+        .col.m6.s12
+          .card
+            .card-content
+              h5 PrintAt (2017)
+              p.
+                Public Printing Platform for the masses. Print Anywhere, Instantly.
+                Find Nearby Printers, Upload File, Wait for Queues and get your papers.
+                Built with Axi Platform (Python, MQTT &amp; CUPS for Remote Printing)
+                Production: printat.co
+                GitHub: github.com/phoomparin/PrintAt
+      .row
+        .col.m6.s12
+          .card
+            .card-content
+              h5 FlipED (2016 - 2017)
+              p.
+                Flipped Classroom Platform
+                Intuitive Editing with Interative Custom Content
+                Real-Time Progressive Web App (Feathers &amp; WebSocket)
+                Responsive, Custom-Built UI Component (React &amp; Sass)
+                Production: fliped.xyz
+                GitHub: github.com/phoomparin/FlipED
+        .col.m6.s12
+          .card
+            .card-content
+              h5 vSchool (2015 - 2016)
+              p.
+                Single-Page Webapp for School Management, with Material Design
+                ES5, Python, Polymer 0.5, Web Components &amp; Django REST Framework
+                Reverse Engineered School's Grading Client &amp; Migrated Visual FoxPro DB to SQLite
+
+mixin skills
+  .container
+    h3 Skills
+    .row
+      .col.m6
+        h4 Proficient
+        h5 Most Preferred and Beloved
+        ul
+          li Modern JavaScript (ES6, ES7)
+          li Web Frontend Basics (HTML/CSS)
+          li React &amp; Redux
+          li Feathers &amp; Socket.io
+          li Node.js &amp; Express
+          li Sass &amp; PostCSS
+      .col.m6
+        h4 Good
+        h5 Highly Comfortable
+        ul
+          li Docker Swarm, Docker Compose, Docker Stack
+          li MongoDB &amp; Mongoose
+          li Python 3
+          li Electron &amp; Nw.js
+          li Redis &amp; NginX
+          li Webpack &amp; Babel
+    .row
+      .col.s6
+        h4 Average
+        h5 Had used in the past project(s)
+        ul
+          li Django &amp; Django REST Framework
+          li LAMP Stack (Linux, Apache, MySQL &amp; PHP)
+          li Meteor.js
+          li Polymer
+          li MQTT
+          li Kubernetes
+          li C++ &amp; QT 5
+      .col.s6
+        h4 Beginner
+        h5 Still learning about it
+        p Pretty much everything else ;)
+
+    .row
+      .col.s12
+        h4 Other Skills and Hobbies (Non-Technical)
+        ul
+          li English Communication and Writing
+          li General Startup and Business Knowledge
+
 block body
   +header("/resume")
   main
     section.wip
-      p This résumé page is still <b>heavily work-in-progress</b>! Please come back later.
-
-    .container
-      section.cv-downloads
-        h3 Download CV and Résumé
-        p.large-text The CV (Curriculum Vitae) and Resume is available for download in the PDF format.
-
-      section.timeline
-        h3 Timeline
-        p ...
-
-      section.awards
-        h3 Awards &amp; Achievements
-
-        //- NSC2017
-        .row
-          .col.s12
-            .card
-              .card-content
-                p National Software Contest #19 (2017) by NECTEC: 1st Place Winner (National)
-
-        //- NSC2016
-        .row
-          .col.s12
-            .card
-              .card-content
-                p National Software Contest #18 (2016) by NECTEC: 2nd Place Winner (National)
-
-        //- OBEC
-        .row
-          .col.m4.s12
-            .card
-              .card-content
-                p Student Software Contest #66 (2017) by OBEC: 3rd Place Winner (National)
-          .col.m4.s12
-            .card
-              .card-content
-                p Student Software Contest #65 (2016) by OBEC: 1st Place Winner (National)
-          //- li Student Programming Contest #64 (2015) by OBEC: Gold Medal
-
-      section.experiences
-        h4 Experiences
-        .row
-          .col.m4
-            .card
-              .card-content
-                ul
-                  li Will be interning at iTAX for The Internship Program 2017
-                  li Torkla Project #4 (2016) by SCB Foundation: Successfully Completed
-                  li Speaker at SEC on the topic of DevOps and Kubernetes
-                  li Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest 2016
-
-      section.hackathons
-        h4 Hackathons
-        .row
-          .col.m4.s12
-            .card
-              .card-content
-                p UHack Thammasart Hackathon by Enterprise Lab: Best E-Payment Award Winner
-                p HotelSuite: Instant Hotel Check-In and Room Control (UHack TU)
-                p GitHub: github.com/phoomparin/HotelSuite-proto
-          .col.m4.s12
-            .card
-              .card-content
-                p YSetter Reality Hackathon at 3DS Interactive: 1st Place Winner
-                p NongTuu Prototype: Instant Lawyer bot (YSetter Reality)
-                p GitHub: github.com/phoomparin/nongtuu
-          .col.m4.s12
-            .card
-              .card-content
-                p Local Hack Day Hackathon by Enterprise Lab: 2nd Place Winner
-                p PrintAt Prototype (Local Hack Day)
-                p GitHub: github.com/phoomparin/PrintAt-proto
-
-        section.projects
-          h4 Project Portfolio
-          .row
-            .col.m6.s12
-              .card
-                .card-content
-                  h5 Axi Platform (2017)
-                  p.
-                    High Availability Physical Web Solutions Platform (Feathers &amp; Docker)
-                    One Tap Interaction with Progressive Web Apps (React &amp; Redux)
-                    Turn IoT Devices into Eddystone Beacons to use with Nearby Notifications
-                    GitHub: github.com/phoomparin/Axi
-            .col.m6.s12
-              .card
-                .card-content
-                  h5 PrintAt (2017)
-                  p.
-                    Public Printing Platform for the masses. Print Anywhere, Instantly.
-                    Find Nearby Printers, Upload File, Wait for Queues and get your papers.
-                    Built with Axi Platform (Python, MQTT &amp; CUPS for Remote Printing)
-                    Production: printat.co
-                    GitHub: github.com/phoomparin/PrintAt
-          .row
-            .col.m6.s12
-              .card
-                .card-content
-                  h5 FlipED (2016 - 2017)
-                  p.
-                    Flipped Classroom Platform
-                    Intuitive Editing with Interative Custom Content
-                    Real-Time Progressive Web App (Feathers &amp; WebSocket)
-                    Responsive, Custom-Built UI Component (React &amp; Sass)
-                    Production: fliped.xyz
-                    GitHub: github.com/phoomparin/FlipED
-            .col.m6.s12
-              .card
-                .card-content
-                  h5 vSchool (2015 - 2016)
-                  p.
-                    Single-Page Webapp for School Management, with Material Design
-                    ES5, Python, Polymer 0.5, Web Components &amp; Django REST Framework
-                    Reverse Engineered School's Grading Client &amp; Migrated Visual FoxPro DB to SQLite
-
-        a#stack
-        .card
-          .card-content
-            h3 Skills
-            .row
-              .col.m6
-                h4 Proficient
-                h5 Most Preferred and Beloved
-                ul
-                  li Modern JavaScript (ES6, ES7)
-                  li Web Frontend Basics (HTML/CSS)
-                  li React &amp; Redux
-                  li Feathers &amp; Socket.io
-                  li Node.js &amp; Express
-                  li Sass &amp; PostCSS
-              .col.m6
-                h4 Good
-                h5 Highly Comfortable
-                ul
-                  li Docker Swarm, Docker Compose, Docker Stack
-                  li MongoDB &amp; Mongoose
-                  li Python 3
-                  li Electron &amp; Nw.js
-                  li Redis &amp; NginX
-                  li Webpack &amp; Babel
-            .row
-              .col.s6
-                h4 Average
-                h5 Had used in the past project(s)
-                ul
-                  li Django &amp; Django REST Framework
-                  li LAMP Stack (Linux, Apache, MySQL &amp; PHP)
-                  li Meteor.js
-                  li Polymer
-                  li MQTT
-                  li Kubernetes
-                  li C++ &amp; QT 5
-              .col.s6
-                h4 Beginner
-                h5 Still learning about it
-                p Pretty much everything else ;)
-
-        .card
-          .card-content
-            h4 Other Skills and Hobbies (Non-Technical)
-            ul
-              li English Communication and Writing
-              li General Startup and Business Knowledge
+      p The entire résumé page is still <b>heavily work-in-progress</b>! Please come back later.
+    +downloads
+    +timeline
+    +awards
+    +projects
+    +skills
   +footer

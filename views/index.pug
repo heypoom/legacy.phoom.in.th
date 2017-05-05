@@ -9,8 +9,10 @@ mixin introduction
       p.large-text
         | <b class="hi">Hi!</b> I'm <b>Phoomparin Mano</b>, a passionate <b>full stack developer</b> from Bangkok, Thailand.
       p
+        | First of all, I'm interested in all kinds of <b>software development</b>, and took it as my career by heart.
         | I've learned to code <abbr title="It has been seven years already.">since I was eight</abbr>, and
-        | I <a href="/resume">haven't ever stopped since then</a>.
+        | I <a href="/resume">haven't ever stopped since then</a>. I also have a strong interest in the <b>startup culture</b>,
+        | <b>product development</b>, and the business side of things.
       p
         | When faced with problems, I tackle them with my creative thinking and coding skills to build awesome projects,
         | and that's what drives my passion in software development.
@@ -19,8 +21,12 @@ mixin introduction
         | software development principles and business viability.
         | The most important thing is that <b>we'll do it together</b>!
       p
-        | Feel free to view my <a href="/resume"><b>Interactive Résumé</b> (WIP)</a>, <a href="https://github.com/phoomparin"><b>GitHub Profile</b></a>,
-        | and <a href="https://medium.com/@phoomparin"><b>Medium Blogs</b></a> to see what I've accomplished.
+        | Feel free to view my <a href="/resume" target="_blank" rel="noopener noreferrer"><b>Interactive Résumé</b> (WIP)</a>,
+        | <a href="https://github.com/phoomparin" target="_blank" rel="noopener noreferrer"><b>GitHub Profile</b></a>,
+        | and <a href="https://medium.com/@phoomparin" target="_blank" rel="noopener noreferrer"><b>Medium Blogs</b></a> to see what I've accomplished.
+      p
+        | Best Regards, <br>
+        | Phoomparin Mano.
 
 mixin capabilities
   .container
@@ -60,9 +66,6 @@ mixin contact
         | It's perfectly fine if you're still unsure, changed your mind later, or just wanted to say hi.
         | It's simple and doesn't cost anything; Just <a href="/contact#chat"><b>give it a try!</b></a>
         |
-      p
-        | Best Regards, <br>
-        | Phoomparin Mano
 
 mixin skills
   .container
@@ -79,6 +82,8 @@ mixin splash(is)
 block body
   +header("/")
   main
+    section.wip.warn
+      p The index page is still a <b>work-in-progress</b>. Please come back later for greater details and more polished design.
     +introduction
     +capabilities
     +startups

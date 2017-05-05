@@ -71,12 +71,26 @@ a {
   top: 0;
   width: 100%;
   text-align: center;
-  height: 3.5em;
   background: #e74c3c;
   box-shadow: $zLite;
-  z-index: 5;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    background: #c0392b;
+    color: white;
+  }
+
+  &.warn {
+    background: #e67e22;
+  }
+
+  &.warn:hover {
+    background: #d35400;
+  }
 
   p {
-    color: white;
+    color: #efefef;
+    padding: 0 0.8em;
   }
 }

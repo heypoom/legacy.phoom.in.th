@@ -1,3 +1,4 @@
+// Setup Service Workers
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/sw.js")
     .then(function(sw) {
@@ -7,15 +8,19 @@ if (navigator.serviceWorker) {
     })
 }
 
-$("document").ready(function() {
-  $(".button-collapse").sideNav()
-
+// Initialize and Re-initialize jQuery Event Handlers
+function init() {
   $(".side-nav > li.link").click(function() {
     $(".side-nav").sideNav("hide")
   })
 
-  $("*[data-tooltip]").tooltip({delay: 50})
+  $(".wip").click(function() {
+    $(this).fadeOut()
+  })
+}
 
+$("document").ready(function() {
+  // Setup Pjax
   var pjax = new Pjax({
     selectors: [
       "title", "main",
@@ -24,4 +29,15 @@ $("document").ready(function() {
     ],
     scrollTo: false
   })
+
+  // One-Time Event Handlers
+  $(".button-collapse").sideNav()
+  $("*[data-tooltip]").tooltip({delay: 50})
+
+  init()
+})
+
+// Re-initialize Event Handlers on Pjax
+$(document).on('pjax:complete', function() {
+  init()
 })
