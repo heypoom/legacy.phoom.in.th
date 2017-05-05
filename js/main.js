@@ -14,6 +14,8 @@ $("document").ready(function() {
     $(".side-nav").sideNav("hide")
   })
 
+  $("*[data-tooltip]").tooltip({delay: 50})
+
   var pjax = new Pjax({
     selectors: [
       "title", "main",

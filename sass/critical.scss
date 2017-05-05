@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
+  position: relative;
   padding-top: 3em;
 }
 
@@ -62,5 +63,20 @@ a {
 .hide-on-med-and-up {
   @media #{$medium-and-up} {
     display: none !important;
+  }
+}
+
+.wip {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  height: 3.5em;
+  background: #e74c3c;
+  box-shadow: $zLite;
+  z-index: 5;
+
+  p {
+    color: white;
   }
 }

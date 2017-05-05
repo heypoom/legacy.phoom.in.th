@@ -3,86 +3,84 @@ extends comp/page
 block meta
   title Phoomparin Mano | Full Stack Developer
 
-mixin chooser
-  .btn.indigo.waves-effect.waves-light What kind of software should my project be in?
-  .row(style="margin-top: 1em")
-    .col.s4
-      .card.cf
-        .card-content
-          h4.white-text.center Web App
-    .col.s4
-      .card.cf
-        .card-content
-          h4.white-text.center Mobile App
-    .col.s4
-      .card.cf
-        .card-content
-          h4.white-text.center Website
-  br
-  br
+mixin introduction
+  .container
+    section.landing
+      p.large-text
+        | <b class="hi">Hi!</b> I'm <b>Phoomparin Mano</b>, a passionate <b>full stack developer</b> from Bangkok, Thailand.
+      p
+        | I've learned to code <abbr title="It has been seven years already.">since I was eight</abbr>, and
+        | I <a href="/resume">haven't ever stopped since then</a>.
+      p
+        | When faced with problems, I tackle them with my creative thinking and coding skills to build awesome projects,
+        | and that's what drives my passion in software development.
+      p
+        | When developing software, I tend to think about practicality, user experience,
+        | software development principles and business viability.
+        | The most important thing is that <b>we'll do it together</b>!
+      p
+        | Feel free to view my <a href="/resume"><b>Interactive Résumé</b> (WIP)</a>, <a href="https://github.com/phoomparin"><b>GitHub Profile</b></a>,
+        | and <a href="https://medium.com/@phoomparin"><b>Medium Blogs</b></a> to see what I've accomplished.
 
-//- Technical List
-//- section.tech
-//-   p
-//-     | I  such as
-//-     | React, Redux, Feathers, Express, Node.js, Socket.io, Sass, PostCSS, Python, Electron and Docker.
+mixin capabilities
+  .container
+    section.landing
+      p.large-text
+        | What can you develop or make? What kind of software should my project be?
+      p
+        | I'm able to develop many types of software, such as progressive web apps, websites,
+        | mobile apps, desktop programs, real-time microservice backends, and even IoT devices!
+      p
+        | I've used many <a href="/resume#stack"><b>modern tools and technologies</b></a> to
+        | develop various <a href="/portfolio"><b>projects and prototypes</b></a> to resolve problems, but I prefer to
+        | work with <b>JavaScript</b> at the moment because I'm impressed with how expressive it is.
+
+mixin startups
+  .container
+    section.landing
+      p.large-text
+        | I'm the founder of a startup! Can you develop an MVP for us?
+      p
+        | If you're a startup founder or thinking of becoming one, I'd love to hear your ideas and help you out!
+        | I became very obsessed with the startup culture since 2015, so I'm very passionate about
+        | <a href="/contact#startup"><b>developing MVPs</b></a> for your startups.
+        | Simply <a href="/contact#startup"><b>let me know</b></a>, and we'll surely be talking in no time, I promise!
+
+mixin contact
+  .container
+    section.landing
+      p.large-text
+        | How can I contact you? Are you available for hire?
+      p
+        | I would <b>love to talk with you</b>, and please don't hesitate to say hello!
+      p
+        | If you have a project in mind, wanted to hire or recruit me, or let me be in your team,
+        | please contact me via <a href="/contact#hire"><b>the contact form</b></a>, or we can
+        | discuss first in the <a href="/contact#chat"><b>live chat</b></a>.
+        | It's perfectly fine if you're still unsure, changed your mind later, or just wanted to say hi.
+        | It's simple and doesn't cost anything; Just <a href="/contact#chat"><b>give it a try!</b></a>
+        |
+      p
+        | Best Regards, <br>
+        | Phoomparin Mano
+
+mixin skills
+  .container
+    section.landing
+      p.large-text
+        | What technologies can you develop with, and what skills do you have?
+      p
+        | React, Redux, Feathers, Express, Node.js, Socket.io, Sass, PostCSS, Python, Electron and Docker.
+
+mixin splash(is)
+  .splash.z-depth-1(data-is=is)
+    block
 
 block body
   +header("/")
   main
-    .container
-      .row
-        .col.s12
-          section.landing
-            p.large-text
-              | <b class="hi">Hi!</b> I'm <b>Phoomparin Mano</b>, a passionate <b>full stack developer</b> from Bangkok, Thailand.
-            p
-              | I've learned to code <abbr title="It has been seven years already.">since I was eight</abbr>, and
-              | I <a href="/resume">haven't ever stopped since then</a>.
-            p
-              | When faced with problems, I tackle them with my creative thinking and coding skills to build awesome projects,
-              | and that's what drives my passion in software development.
-            p
-              | When developing software, I tend to think about practicality, user experience,
-              | software development principles and business viability.
-              | The most important thing is that <b>we'll do it together</b>!
-            p
-              | Feel free to view my <a href="/resume"><b>resume</b></a> and <a href="/portfolio"><b>portfolio</b></a>
-              | to see what I've recently accomplished.
-
-          section.landing
-            p.large-text
-              | What can you develop or make? What kind of software should my project be?
-            p
-              | I'm able to develop many types of software, such as progressive web apps, websites,
-              | mobile apps, desktop programs, real-time microservice backends, and even IoT devices!
-            p
-              | I've used many <a href="/resume#stack"><b>modern tools and technologies</b></a> to
-              | develop various <a href="/portfolio"><b>projects and prototypes</b></a> to resolve problems, but I prefer to
-              | work with <b>JavaScript</b> at the moment because I'm impressed with how expressive it is.
-
-          section.landing
-            p.large-text
-              | I'm the founder of a startup! Can you develop an MVP for us?
-            p
-              | If you're a startup founder or thinking of becoming one, I'd love to hear your ideas and help you out!
-              | I became very obsessed with the startup culture since 2015, so I'm very passionate about
-              | <a href="/contact#startup"><b>developing MVPs</b></a> for your startups.
-              | Simply <a href="/contact#startup"><b>let me know</b></a>, and we'll surely be talking in no time, I promise!
-              |
-          section.landing
-            p.large-text
-              | How can I contact you? Are you available for hire?
-            p
-              | I would <b>love to talk with you</b>, and please don't hesitate to say hello!
-            p
-              | If you have a project in mind, wanted to hire or recruit me, or let me be in your team,
-              | please contact me via <a href="/contact#hire"><b>the contact form</b></a>, or we can
-              | discuss first in the <a href="/contact#chat"><b>live chat</b></a>.
-              | It's perfectly fine if you're still unsure, changed your mind later, or just wanted to say hi.
-              | It's simple and doesn't cost anything; Just <a href="/contact#chat"><b>give it a try!</b></a>
-              |
-            p
-              | Best Regards, <br>
-              | Phoomparin Mano
+    +introduction
+    +capabilities
+    +startups
+    +contact
   +footer
