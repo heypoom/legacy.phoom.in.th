@@ -12,15 +12,39 @@ mixin downloads
         | and résumé is available for download in the PDF format. To clarify, the CV is the
         | full record of my career experiences, and the résumé is the brief summary of myself.
 
+mixin tl_item(name, time, icon)
+  .item
+    .badge
+      i.material-icons web
+      .time= time
+    .text
+      .title #{name}
+      .desc
+        block
+
 mixin timeline
-  .container
-    section.timeline
-      h3 Timelines and Experiences
-      p
-        | Will be interning at iTAX for The Internship Program 2017
-        | Torkla Project #4 (2016) by SCB Foundation: Successfully Completed
-        | Speaker at SEC on the topic of DevOps and Kubernetes
-        | Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest 2016
+  section.timelines
+    .container
+      h2 Timelines and Experiences
+      .timeline
+        .line
+        +tl_item("Started learning to program", "2009")
+          | I play games a lot back then, so I decided to create my own game
+          | modifications and plug-ins. That's when I first learned how to program in Java.
+        +tl_item("Won the Gold Medal in the Student Programming Contest #64 by OBEC", "2015")
+        +tl_item("Won the National First Place in the Student Software Contest #65 by OBEC", "2015")
+        +tl_item("Won the 2nd Place in the National Software Contest #18 by NECTEC", "2016")
+        +tl_item("Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest", "2016")
+        +tl_item("Won the 2nd Place in the Local Hack Day Hackathon by Enterprise Lab", "2016")
+        +tl_item("Dropped out of High School in the 10th Grade", "2016")
+
+        +tl_item("Successfully Completed the Torkla Project #4 by SCB Foundation", "2017")
+        +tl_item("Won the 3rd Place in the Student Software Contest #66 by OBEC", "2017")
+        +tl_item("Won the First Place in the YSetter Reality Hackathon at 3DS Interactive", "2017")
+        +tl_item("Won the First Place in the National Software Contest #19 by NECTEC", "2017")
+        +tl_item("Speaker at SEC on the topic of DevOps and Kubernetes", "2017")
+        +tl_item("Won the Best E-Payment Award in the UHack Thammasart Hackathon by Enterprise Lab", "2017")
+        +tl_item("Will be interning at iTAX for The Internship Program", "2017")
 
 mixin awards
   .container

@@ -39,6 +39,17 @@
   border: 2px solid #0277bd;
 }
 
+.profile-banner {
+  position: absolute;
+  right: -0.8em;
+  top: -0.5em;
+  background: #16a085;
+  padding: 0.2em 0.8em;
+  border: 2px solid white;
+  border-radius: 1em;
+  text-align: center;
+}
+
 // Footers are non-critical, because they appear at the end of the page.
 
 .c20 {

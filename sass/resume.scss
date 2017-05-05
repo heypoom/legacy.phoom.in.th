@@ -1,0 +1,79 @@
+$tl-primary: #16a085;
+
+section.timelines {
+  margin: 3.5em 0;
+  padding: 1.5em 0;
+
+  background: #e9f0f5;
+  color: #7f8c97;
+
+  h2 {
+    font-size: 2.1em;
+    margin-bottom: 1em;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin-left: 10vw;
+}
+
+.timeline > .line {
+  position: absolute;
+  left: 1.68em;
+
+  width: 0.2em;
+  height: 100%;
+
+  background: $tl-primary;
+}
+
+.timeline > .item {
+  display: flex;
+  position: relative;
+
+  margin-bottom: 2.5em;
+}
+
+.timeline > .item > .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  min-width: 3.5em;
+  height: 3.5em;
+
+  background: white;
+  border: 2px solid $tl-primary; // #16a085;
+  border-radius: 50%;
+  box-shadow: $z1;
+
+  .time {
+    position: absolute;
+    left: -3.6em;
+    top: 0.6em;
+    font-size: 1.27em;
+  }
+
+  i.material-icons {
+    color: $tl-primary;
+  }
+}
+
+.timeline > .item > .text {
+  position: relative;
+  width: 100%;
+
+  padding: 1em;
+  margin-left: 2.5em;
+
+
+  background: white;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 0 #d7e4ed;
+
+  .title {
+    font-size: 1.4em;
+  }
+}
