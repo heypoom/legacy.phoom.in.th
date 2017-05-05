@@ -75,9 +75,12 @@ mixin skills
       p
         | React, Redux, Feathers, Express, Node.js, Socket.io, Sass, PostCSS, Python, Electron and Docker.
 
-mixin splash(is)
-  .splash.z-depth-1(data-is=is)
-    block
+mixin splash(type, overlay)
+  .splash.z-depth-1(data-is=type)
+    if overlay
+      .overlay(data-is=overlay)
+    .content
+      block
 
 block body
   +header("/")
@@ -85,6 +88,8 @@ block body
     section.wip.warn
       p The index page is still a <b>work-in-progress</b>. Please come back later for greater details and more polished design.
     +introduction
+    +splash("1", true)
+      p.large-text Frequently Asked Questions
     +capabilities
     +startups
     +contact
