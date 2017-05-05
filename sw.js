@@ -4,7 +4,7 @@ importScripts("js/sw-toolbox-cache.js")
 toolbox.precache([
   "/", "404.html",
   "css/critical.css", "css/main.css",
-  "img/flask.blue.svg", "img/me.min.jpg",
+  "img/flask.blue.svg", "img/lonely_commute.min.jpg", "img/mbp_code.min.js",
   "js/pjax.js", "js/main.js", "js/sw-toolbox.js", "js/sw-toolbox-cache.js",
   "https://fonts.googleapis.com/css?family=Roboto:300,400",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
