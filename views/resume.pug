@@ -13,12 +13,13 @@ mixin downloads
         | full record of my career experiences, and the résumé is the brief summary of myself.
 
 mixin tl_item(name, time, icon)
+  - icon = icon || "done_all"
   .item
     .badge
-      i.material-icons web
+      i.material-icons= icon
       .time= time
     .text
-      .title #{name}
+      .title !{name}
       .desc
         block
 
@@ -28,35 +29,62 @@ mixin timeline
       h2 Timelines and Experiences
       .timeline
         .line
-        +tl_item("Started learning to program", "2009")
+        +tl_item("Started learning to program", "2009", "language")
           | I play games a lot back then, so I decided to create my own game
           | modifications and plug-ins. That's when I first learned how to program in Java.
         +tl_item("Won the Gold Medal in the Student Programming Contest #64 by OBEC", "2015")
-        +tl_item("Won the National First Place in the Student Software Contest #65 by OBEC", "2015")
-        +tl_item("Won the 2nd Place in the National Software Contest #18 by NECTEC", "2016")
-        +tl_item("Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest", "2016")
-        +tl_item("Won the 2nd Place in the Local Hack Day Hackathon by Enterprise Lab", "2016")
-        +tl_item("Dropped out of High School in the 10th Grade", "2016")
+          | The first programming competitions in my life. I became quite obsessed with
+          | software development since then.
+        +tl_item("Started developing the vSchool Project", "2015", "web")
+          | The first serious software project. It was a school management system,
+          | in which I used new technologies such as Polymer 0.5, SQLite and Django REST Framework.
+        +tl_item("Won the <b>First Place</b> in the Student Software Contest #65 by OBEC", "2015")
+          | To my surprise, vSchool had won the first place in the student software project contest.
+          | I was in grade 9 in middle school, and this really inspires me to continue learning
+          | about software development.
+        +tl_item("Won the <b>2nd Place</b> in the National Software Contest #18 by NECTEC", "2016")
+          | I was <b>extremely delighted</b>! I'm still in grade 9, and the other team
+          | that got this prize together is in grade 11. There was no 1st place winners that year.
+          | I told myself I will definitely won the first place next year.
+        +tl_item("Started developing the FlipED Platform", "2016", "web")
+          | To prepare myself for the upcoming Torkla Project, I need to re-make my project.
+          | It is the platform for creating a flipped classroom for Thailand's education 4.0 motto.
+          | This time, I choose to use React, Redux, MongoDB and Feathers as my tech stack.
+        +tl_item("Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest", "2016", "track_changes")
+          | The 2nd place and the 1st place winners of the National Software Contest will be given a
+          | special privilege to fast-track into the final round of those 2 competitions.
+        +tl_item("Won the <b>2nd Place</b> in the Local Hack Day Hackathon by Enterprise Lab", "2016")
+        +tl_item("Dropped out of High School in the 10th Grade", "2016", "language")
+          | Possibly the most critical decisions I've ever made in my entire life.
+          | I wanted to pursue my dreams as fast as I could, so I decided to skip
+          | the high school, and enter university right away.
 
-        +tl_item("Successfully Completed the Torkla Project #4 by SCB Foundation", "2017")
-        +tl_item("Won the 3rd Place in the Student Software Contest #66 by OBEC", "2017")
-        +tl_item("Won the First Place in the YSetter Reality Hackathon at 3DS Interactive", "2017")
-        +tl_item("Won the First Place in the National Software Contest #19 by NECTEC", "2017")
-        +tl_item("Speaker at SEC on the topic of DevOps and Kubernetes", "2017")
+        +tl_item("Successfully Completed the Torkla Project #4 by SCB Foundation", "2016 - 2017", "track_changes")
+        +tl_item("Started developing the PrintAt Project", "2017", "web")
+        +tl_item("Won the <b>3rd Place</b> in the Student Software Contest #66 by OBEC", "2017")
+        +tl_item("Started developing the Axi Platform", "2017", "web")
+        +tl_item("Won the <b>First Place</b> in the YSetter Reality Hackathon at 3DS Interactive", "2017")
+          | One of the most fun hackathons I've ever been to, no kidding! The teammates are so nice, and I
+          | finally learned how nice it is to have a great team. I've also learned some life skills the hard way.
+        +tl_item("Won the <b>First Place</b> in the National Software Contest #19 by NECTEC", "2017")
+          | Guess what, <b>I've actually made it</b> to the First Place! This accomplishment is by far the most valuable for me.
+          | I've learned to develop with many new technologies, and it works really well.
+          | In addition, I received a royal trophy and a certificate from queen Sirikit,
+          | along with 60,000 THB as a prize.
+        +tl_item("Speaker at SEC on the topic of DevOps and Kubernetes", "2017", "track_changes")
         +tl_item("Won the Best E-Payment Award in the UHack Thammasart Hackathon by Enterprise Lab", "2017")
-        +tl_item("Will be interning at iTAX for The Internship Program", "2017")
+        +tl_item("Will be interning at iTAX for The Internship Program", "2017", "track_changes")
 
 mixin awards
   .container
     section.awards
       h3 Awards &amp; Achievements
       .row
-        .col.s12
+        .col.m6.s12
           .card
             .card-content
               p National Software Contest #19 (2017) by NECTEC: 1st Place Winner (National)
-      .row
-        .col.s12
+        .col.m6.s12
           .card
             .card-content
               p National Software Contest #18 (2016) by NECTEC: 2nd Place Winner (National)
