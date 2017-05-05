@@ -17,7 +17,7 @@ nav {
 
     li > a {
       color: #efefef;
-      opacity: .9;
+      opacity: .85;
       font-size: 2.1em;
       text-transform: lowercase;
     }
@@ -25,6 +25,7 @@ nav {
     li:hover, li.active {
       a {
         opacity: 1;
+        border-bottom: 2px solid #efefef;
       }
     }
   }
