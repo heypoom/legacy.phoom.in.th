@@ -26,54 +26,104 @@ mixin tl_item(name, time, icon)
 mixin timeline
   section.timelines
     .container
-      h2 Timelines and Experiences
+      //- h2 Timelines and Experiences
       .timeline
         .line
-        +tl_item("Started learning to program", "2009", "language")
+        +tl_item("Magically appeared on planet Earth", "2001", "language")
+        +tl_item("Started learning to code", "2009", "language")
           | I play games a lot back then, so I decided to create my own game
           | modifications and plug-ins. That's when I first learned how to program in Java.
-        +tl_item("Won the Gold Medal in the Student Programming Contest #64 by OBEC", "2015")
-          | The first programming competitions in my life. I became quite obsessed with
-          | software development since then.
+          | This is when my journey starts!
+
+        +tl_item("Won the Student Programming Competition #64", "2015")
+          | My middle school teacher took me to the first programming competition
+          | in my entire life, in which I was in grade 8. I participated in both the C++
+          | programming and basic web design competition, in which I won the first place
+          | and a gold medal.
+
         +tl_item("Started developing the vSchool Project", "2015", "web")
           | The first serious software project. It was a school management system,
           | in which I used new technologies such as Polymer 0.5, SQLite and Django REST Framework.
-        +tl_item("Won the <b>First Place</b> in the Student Software Contest #65 by OBEC", "2015")
+          | I became quite obsessed with software development since then.
+
+        +tl_item("Won the First Place in the Student Software Contest #65", "2015")
           | To my surprise, vSchool had won the first place in the student software project contest.
-          | I was in grade 9 in middle school, and this really inspires me to continue learning
+          | I was just in grade 9 in middle school, and this really inspires me to continue learning
           | about software development.
-        +tl_item("Won the <b>2nd Place</b> in the National Software Contest #18 by NECTEC", "2016")
-          | I was <b>extremely delighted</b>! I'm still in grade 9, and the other team
-          | that got this prize together is in grade 11. There was no 1st place winners that year.
+
+        +tl_item("Won the 2nd Place in the National Software Contest #18", "2016")
+          | I was <b>extremely delighted</b>! I'm the youngest student (still in grade 9), and the other team
+          | that also won this prize is in grade 11. There was no 1st place winners that year.
           | I told myself I will definitely won the first place next year.
+
         +tl_item("Started developing the FlipED Platform", "2016", "web")
           | To prepare myself for the upcoming Torkla Project, I need to re-make my project.
           | It is the platform for creating a flipped classroom for Thailand's education 4.0 motto.
           | This time, I choose to use React, Redux, MongoDB and Feathers as my tech stack.
+
         +tl_item("Joined Thailand ICT Awards 2016 and Queen Sirikit IT Project Contest", "2016", "track_changes")
           | The 2nd place and the 1st place winners of the National Software Contest will be given a
           | special privilege to fast-track into the final round of those 2 competitions.
-        +tl_item("Won the <b>2nd Place</b> in the Local Hack Day Hackathon by Enterprise Lab", "2016")
+
+        +tl_item("Won the 2nd Place in the Local Hack Day Hackathon by Enterprise Lab", "2016")
+          | My first Hackathon in my entire life. I made a quick prototype called PrintAt, which allows
+          | you to remotely print any document to print shops near you. For the record,
+          | I actually liked this idea, and I might turn it into a startup someday in the future.
+
         +tl_item("Dropped out of High School in the 10th Grade", "2016", "language")
           | Possibly the most critical decisions I've ever made in my entire life.
           | I wanted to pursue my dreams as fast as I could, so I decided to skip
-          | the high school, and enter university right away.
+          | the high school entirely. I've met many great people and opportunities,
+          | made many accomplishments, and I don't regret it at all!
 
-        +tl_item("Successfully Completed the Torkla Project #4 by SCB Foundation", "2016 - 2017", "track_changes")
-        +tl_item("Started developing the PrintAt Project", "2017", "web")
-        +tl_item("Won the <b>3rd Place</b> in the Student Software Contest #66 by OBEC", "2017")
-        +tl_item("Started developing the Axi Platform", "2017", "web")
-        +tl_item("Won the <b>First Place</b> in the YSetter Reality Hackathon at 3DS Interactive", "2017")
+        +tl_item("Successfully Completed the Torkla Project #4 by SCB Foundation", "2017", "track_changes")
+          | This is the best program I've ever been to! I made tons of friends, the coaches taught me
+          | tons of interesting stuff about user-centric design and lots of life-changing product design advices.
+          | I've learned that sufficient planning, team management and being practical helps a lot.
+
+        +tl_item("Started developing the PrintAt Project, and the Axi Platform", "2017", "web")
+          | One of the projects that I loved the most. This project uses the Physical Web to allow
+          | instantaneous interaction with your everyday objects, and it uses a high-availability infrastructure
+          | underneath. I've actually turned the PrintAt prototype into a fully working product!
+
+        +tl_item("Won the 3rd Place in the Student Software Contest #66 by OBEC", "2017")
+          | Sadly, the judges doesn't seem to be interested in the technologies I've been using,
+          | so I've only got the 3rd Place in this competition, which is the final student software project
+          | since I already dropped out. I thought to myself: "Don't fret, the real deal is the National Software Contest!"
+
+        +tl_item("Won the First Place in the YSetter Reality Hackathon", "2017")
           | One of the most fun hackathons I've ever been to, no kidding! The teammates are so nice, and I
-          | finally learned how nice it is to have a great team. I've also learned some life skills the hard way.
-        +tl_item("Won the <b>First Place</b> in the National Software Contest #19 by NECTEC", "2017")
-          | Guess what, <b>I've actually made it</b> to the First Place! This accomplishment is by far the most valuable for me.
-          | I've learned to develop with many new technologies, and it works really well.
-          | In addition, I received a royal trophy and a certificate from queen Sirikit,
-          | along with 60,000 THB as a prize.
+          | finally learned how nice it is to work with a great team. The event was well-organized,
+          | the staffs were very nice and friendly, and I've also learned some life skills the hard way.
+
+        +tl_item("Won the First Place in the National Software Contest #19", "2017")
+          | Guess what, <b>I've actually made it</b> to the First Place! This accomplishment is <b>by far the most valuable</b> for me.
+          | I've learned to develop with many new technologies. In addition, I received a royal trophy
+          | and a certificate from H.M. the queen sirikit, along with 60,000 THB as a prize.
+
         +tl_item("Speaker at SEC on the topic of DevOps and Kubernetes", "2017", "track_changes")
-        +tl_item("Won the Best E-Payment Award in the UHack Thammasart Hackathon by Enterprise Lab", "2017")
+          | I used to help my senior to pitch at the FinTech challenge, but unfortunately his idea
+          | did not work out. However, one of the judges saw that I was including Kubernetes in my plan,
+          | so he invited me to give a talk at SEC. Despite the fact that I'm 15, I took the opportunity.
+
+        +tl_item("Won the Best E-Payment Hack in the UHack TU Hackathon", "2017")
+          | This is the third hackathon I've ever been to. This one was organized by Enterprise Lab,
+          | the same company who organized the Local Hack Day. We re-assembled the exact same team as
+          | the YSetter Hackathon. To my surprise, I actually won three hackathons in a row! Whew.
+
+        +tl_item("Written my first Medium Article about 'The Web vs Mobile App'", "2017", "track_changes")
+          | The responses were truly overwhelming, and I got over 1,300 views in less than a day!
+          | I've got many praises in Facebook, and people told me to keep writing. This really inspires me
+          | to keep sharing knowledge and perspectives with other developers via the Medium platform.
+
         +tl_item("Will be interning at iTAX for The Internship Program", "2017", "track_changes")
+          | I heard someone talking about something called "The Internship Program" while I was at the
+          | train station. I decided to Google it and participated in the program, and I made it through the final round.
+          | I'm seriously going to intern at a Tech Startup when I'm still 15 years old!
+          
+        +tl_item("Continue on the Journey of Life", "", "receipt")
+          | Who knows what the future will bring for us. I'll keep following my dreams with passion,
+          | in order to make the world a better place than it is now.
 
 mixin awards
   .container

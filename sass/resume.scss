@@ -2,7 +2,7 @@ $tl-primary: #16a085;
 
 section.timelines {
   margin: 3.5em 0;
-  padding: 1.5em 0;
+  padding: 3.5em 0;
 
   background: #e9f0f5;
   color: #7f8c97;
@@ -15,7 +15,7 @@ section.timelines {
 
 .timeline {
   position: relative;
-  margin-left: 10vw;
+  margin-left: 15vw;
 }
 
 .timeline > .line {
@@ -23,7 +23,7 @@ section.timelines {
   left: 1.68em;
 
   width: 0.2em;
-  height: 100%;
+  height: 98%;
 
   background: $tl-primary;
 }
@@ -75,5 +75,11 @@ section.timelines {
 
   .title {
     font-size: 1.4em;
+    color: #555;
+    font-weight: 400;
+  }
+
+  .desc {
+    margin-top: 0.5em;
   }
 }
