@@ -9,8 +9,7 @@ mixin downloads
       h3 My full CV and Résumé (Downloadable PDF format)
       p.large-text
         | If you're looking for the downloadable PDF version, my full CV (Curriculum Vitae)
-        | and résumé is available for download in the PDF format. To clarify, the CV is the
-        | full record of my career experiences, and the résumé is the brief summary of myself.
+        | and résumé is available for download in the PDF format.
 
 mixin tl_item(name, time, icon)
   - icon = icon || "done_all"
@@ -268,8 +267,6 @@ mixin skills
 block body
   +header("/resume")
   main
-    section.wip
-      p The entire résumé page is still <b>heavily work-in-progress</b>! Please come back later for a more polished experience.
     +downloads
     +timeline
     +awards

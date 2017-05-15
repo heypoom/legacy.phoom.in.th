@@ -16,20 +16,20 @@ mixin info
   link(rel="manifest" href="/manifest.json")
   link(rel="canonical" href="https://phoom.in.th")
 
-mixin fonts
-  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400")
-  link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-
 mixin scripts
   script(src="https://code.jquery.com/jquery-3.2.1.min.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js")
-  script(src="/js/pjax.js")
-  script(src="/js/main.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js" defer)
+  script(src="/js/main.js" defer)
+  script(src="/js/pjax.js" async defer)
+  script(src="/js/pace.min.js" async defer)
+  script(src="/js/typer.js" async defer)
   script(src="https://www.google-analytics.com/analytics.js" async)
   script.
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-XXXXX-Y', 'auto');
     ga('send', 'pageview');
+
+- var fonts = "Roboto:300,400|Material+Icons|Slabo+27px|Montserrat:400"
 
 doctype html
 html
@@ -44,5 +44,5 @@ html
   body
     block body
     link(rel="stylesheet" href="/css/main.css")
-    +fonts
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=" + fonts)
     +scripts

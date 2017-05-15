@@ -1,3 +1,68 @@
+@import "./variables.scss";
+
+header.hero.landing {
+  .wrapper {
+    padding: 0 6em;
+  }
+
+  .logo {
+    position: absolute;
+    left: 0.8em;
+    top: 0.8em;
+    font-size: 2.4em;
+    font-family: "Slabo 27px";
+    font-weight: 300;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.4em;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: $z1;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3.7em;
+    line-height: 1.25em;
+    font-weight: 400;
+    max-width: 760px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  .tagline {
+    color: white;
+    font-size: 1.8em;
+    font-family: "Slabo 27px";
+    opacity: 0.8;
+  }
+}
+
+@media #{$medium-and-down} {
+  header.hero.landing .logo {
+    font-size: 1.9em;
+  }
+
+  header.hero.landing h1 {
+    font-size: 2.5em;
+  }
+
+  header.hero.landing .tagline {
+    font-size: 1.7em;
+  }
+}
+
+@media #{$small-and-down} {
+  header.hero.landing .logo {
+   font-size: 1.6em;
+  }
+
+  header.hero.landing h1 {
+    font-size: 2.3em;
+  }
+}
+
 section.landing {
   h1 {
     text-transform: uppercase;
@@ -5,25 +70,16 @@ section.landing {
     line-height: 1em;
   }
 
+  h2 {
+    font-family: "Slabo 27px";
+  }
+
   .hi {
     font-size: 1.6em;
     margin-right: 0.2em;
   }
 
-  p.large-text {
-    margin-top: 0;
-    font-size: 1.5em;
-    line-height: 1.6em;
-  }
-
-  p.medium-text {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.5em;
-    line-height: 1.6em;
-  }
-
-  p:not(.large-text):not(.medium-text) {
+  p {
     font-size: 1.25em;
     line-height: 1.6em;
   }

@@ -1,5 +1,6 @@
 @import "materialize.scss";
 @import "variables.scss";
+@import "pace.scss";
 
 @import "comps/aside.scss";
 
@@ -57,7 +58,7 @@
 }
 
 footer.page-footer {
-  background: #353e48;
+  background: #26262a;
   box-shadow: 0 -4px 7px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 

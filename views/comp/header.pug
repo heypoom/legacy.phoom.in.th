@@ -25,8 +25,8 @@ mixin nav(page)
       ul.nav-links.right
         +links(page)
 
-mixin header(page)
-  header.hero.white-text
+mixin header(page, ctx)
+  header.hero.white-text(class=ctx)
     .overlay
     .wrapper
       if block

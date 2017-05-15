@@ -6,12 +6,11 @@ block meta
 mixin introduction
   .container
     section.landing
-      p.large-text
-        | <b class="hi">Hi!</b> I'm <b>Phoomparin Mano</b>, a passionate <b>full stack developer</b> from Bangkok, Thailand.
+      h2 I'm Phoomparin Mano. Nice to meet you!
       p
-        | First of all, I'm interested in all kinds of <b>software development</b>, and took it as my career by heart.
+        | I'm interested in all kinds of <b>software development</b>, and took it as my career.
         | I've learned to code <abbr title="It has been seven years already.">since I was eight</abbr>, and
-        | I <a href="/resume">haven't ever stopped since then</a>. I also have a strong interest in the <b>startup culture</b>,
+        | I <a href="/resume">haven't ever stopped loving it ever since</a>. I also have a strong interest in the <b>startup culture</b>,
         | <b>product development</b>, and the business side of things.
       p
         | When faced with problems, I tackle them with my creative thinking and coding skills to build awesome projects,
@@ -20,13 +19,6 @@ mixin introduction
         | When developing software, I tend to think about practicality, user experience,
         | software development principles and business viability.
         | The most important thing is that <b>we'll do it together</b>!
-      p
-        | Feel free to view my <a href="/resume" target="_blank" rel="noopener noreferrer"><b>Résumé</b></a>,
-        | <a href="https://github.com/phoomparin" target="_blank" rel="noopener noreferrer"><b>GitHub Profile</b></a>,
-        | and <a href="https://medium.com/@phoomparin" target="_blank" rel="noopener noreferrer"><b>Medium Blogs</b></a> to see what I've recently accomplished.
-      p
-        | Best Regards, <br>
-        | Phoomparin Mano.
 
 mixin capabilities
   .container
@@ -82,14 +74,10 @@ mixin splash(type, overlay)
       block
 
 block body
-  +header("/")
+  +header("/", "landing")
+    .logo(style="transform: rotateZ(330deg)") P|m
+    .tagline I'm a full stack developer who make things come true with code
+    h1 I love to be a part of the next big thing.
   main
-    section.wip.warn
-      p The index page is still a <b>work-in-progress</b>. Please come back later for greater details and more polished design.
     +introduction
-    +splash("1", true)
-      p.large-text Frequently Asked Questions
-    +capabilities
-    +startups
-    +contact
   +footer
